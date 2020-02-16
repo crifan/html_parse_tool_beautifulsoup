@@ -1,0 +1,19 @@
+{
+  "title": "网页解析利器：BeautifulSoup",
+  "description": "整理好用的Python的HTML网页解析器BeautifulSoup的版本选择，为何叫BeautifulSoup，如何安装，如何用其从html网页源码中提取出特定的内容，以及总结常用的函数find和find_all的具体用法，并用实例解释BeautifulSoup和正则re的效果对比和优缺点对比，以及常见的注意事项和使用期间的心得体会。",
+  "pluginsConfig": {
+    "github-buttons": {
+      "buttons": [
+        {
+          "repo": "html_parse_tool_beautifulsoup"
+        }
+      ]
+    },
+    "sitemap-general": {
+      "prefix": "https://book.crifan.com/gitbook/html_parse_tool_beautifulsoup/website/"
+    },
+    "toolbar-button": {
+      "url": "http://book.crifan.com/books/html_parse_tool_beautifulsoup/pdf/html_parse_tool_beautifulsoup.pdf"
+    }
+  }
+}
