@@ -1,5 +1,7 @@
 # 参考资料
 
+* 【已解决】BeautifulSoup中如何删除某个节点
+* 
 * [实现博客搬家](http://www.crifan.com/crifan_released_all/website/python/blogstowordpress/)
 * [Python专题教程：BeautifulSoup详解](https://www.crifan.com/files/doc/docbook/python_topic_beautifulsoup/release/html/python_topic_beautifulsoup.html)
 * [re — Regular expression operations — Python 3.8.2rc1 documentation](https://docs.python.org/3/library/re.html)
@@ -13,4 +15,6 @@
 * [【教程】BeautifulSoup中使用正则表达式去搜索多种可能的关键字](http://www.crifan.com/python_beautifulsoup_find_using_regular_expression/)
 * [【整理】用BeautifulSoup查找属性值未知的标签](http://www.crifan.com/python_use_beautifulsoup_find_tag_with_unknown_attribute_value/)
 * [crifanLib/crifanLib.py at master · crifan/crifanLib](https://github.com/crifan/crifanLib/blob/master/python/crifanLib.py)
+* [【已解决】Python中用BeautifulSoup提取class中包含一定规则的节点](http://www.crifan.com/python_beautifulsoup_extract_node_of_class_contain_some_text)
+* [【已解决】Beautifulsoup 4中搜索html的p的value包含特定值和p中的a的href](http://www.crifan.com/beautifulsoup_4_bs4_search_html_p_value_contain_special_a_href)
 * 

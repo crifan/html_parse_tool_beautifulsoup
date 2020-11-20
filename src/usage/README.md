@@ -8,14 +8,10 @@
 
 ```html
     <li class="clearfix"><span>2020-12-31</span>
-                                                  
               <a ahref="/xsglxt/f/jyxt/anony/showZwxx?zpxxid=104719161&type=" href="javascript:void(0)" style="color:#ff0000;" fbfw="外">2019-2020年度全国各地选调生招录、事业单位人才引进信息汇总————全国各地选调生信息汇总</a>
-                                                          
         </li>     
     <li class="clearfix"><span>2020-12-31</span>
-                                                  
               <a ahref="/xsglxt/f/jyxt/anony/showZwxx?zpxxid=41174064&type=" href="javascript:void(0)" style="color:#ff0000;" fbfw="外">学术就业相关资讯————清华大学学生职业发展指导中心</a>
-                                                          
         </li>  
 ...
 ```
@@ -46,6 +42,8 @@ foundLiList = soup.find_all('li', attrs={"class": "clearfix"})
 foundLiList = soup.find_all('li', class_="clearfix")
 ```
 
+> 说明：为了防止和Python保留字`class`冲突，所以改为`class_`
+
 找到了`li`后，再去找其中的`a`元素
 
 ```python
@@ -68,6 +66,12 @@ ahrefNonEmptyP = re.compile("\S+")
 foundAList = soup.find_all('a', attrs={"fbfw":"外", "ahref": ahrefNonEmptyP})
 ```
 
+注：如果想要查找 有`ahref`属性，但值无所谓，任意值均可，则可以用：`True`，表示存在此属性
+
+```python
+foundAList = soup.find_all('a', attrs={"fbfw":"外", "ahref": True})
+```
+
 以及也可以加上style值的限定：
 
 ```python
@@ -76,16 +80,26 @@ styleColorP = re.compile("color:#[a-zA-Z0-9]+;") # style="color:#ff0000;"
 foundAList = soup.find_all('a', attrs={"fbfw":"外", "ahref": ahrefNonEmptyP, "style": styleColorP})
 ```
 
-然后对于`findall`找到的是**列表**，每个元素类型是tag：
+然后对于`find_all`找到的是**列表**，每个元素类型是tag：
 
 ```bash
 <class 'bs4.element.Tag'>
 ```
 
-然后对于每个`tag`去通过**字典**获取**属性值**，通过`string`获取`文本值`：
+然后对于每个`tag`去通过**字典**获取**属性值**， 有2种写法：
+
+* 直接用属性调用
+    ```python
+    ahref = eachA["ahref"]
+    ```
+* 通过`attrs`字典属性
+    ```python
+    ahref = eachA.attrs["ahref"]
+    ```
+
+通过`string`获取`文本值`：
 
 ```python
-ahref = eachA["ahref"]
 contentStr = eachA.string
 ```
 
@@ -96,4 +110,4 @@ contentStr = eachA.string
 # contentStr=2019-2020年度全国各地选调生招录、事业单位人才引进信息汇总————全国各地选调生信息汇总
 ```
 
-如此，即是基本的，典型的，BeautifulSoup的soup的用法了。
+如上，就是基本和典型的BeautifulSoup的soup的用法了。

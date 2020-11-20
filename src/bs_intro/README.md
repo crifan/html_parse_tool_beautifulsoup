@@ -73,3 +73,12 @@
   * 中文
     * Beautiful Soup 4.4.0 文档 — Beautiful Soup 4.2.0 documentation
       * https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/
+      * 或
+      * https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html
+
+### 旧文档
+
+附上`BS3`=`BeautifulSoup v3`的旧文档，仅供参考
+
+* Beautiful Soup documentation v3
+  * https://www.crummy.com/software/BeautifulSoup/bs3/documentation.html
