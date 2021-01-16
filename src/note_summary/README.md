@@ -1,5 +1,40 @@
 # 注意事项和心得
 
+## `BeautifulSoup v3`升级到`BeautifulSoup v4`后的函数变化
+
+官网[已解释](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id78), BeautifulSoup从`v3`升级到`v4`后，很多函数名变化了：
+
+* `renderContents` -> `encode_contents`
+* `replaceWith` -> `replace_with`
+* `replaceWithChildren` -> `unwrap`
+* `findAll` -> `find_all`
+* `findAllNext` -> `find_all_next`
+* `findAllPrevious` -> `find_all_previous`
+* `findNext` -> `find_next`
+* `findNextSibling` -> `find_next_sibling`
+* `findNextSiblings` -> `find_next_siblings`
+* `findParent` -> `find_parent`
+* `findParents` -> `find_parents`
+* `findPrevious` -> `find_previous`
+* `findPreviousSibling` -> `find_previous_sibling`
+* `findPreviousSiblings` -> `find_previous_siblings`
+* `nextSibling` -> `next_sibling`
+* `previousSibling` -> `previous_sibling`
+
+其他细节变化：
+
+* Beautiful Soup构造方法的参数部分也有名字变化
+  * `BeautifulSoup(parseOnlyThese=...)` -> `BeautifulSoup(parse_only=...)`
+  * `BeautifulSoup(fromEncoding=...)` -> `BeautifulSoup(from_encoding=...)`
+* 为了适配Python3,修改了一个方法名
+  * `Tag.has_key()` -> `Tag.has_attr()`
+* 修改了一个属性名,让它看起来更专业点
+  * `Tag.isSelfClosing` -> `Tag.is_empty_element`
+* 修改了下面3个属性的名字,以免与Python保留字冲突.这些变动不是向下兼容的,如果在BS3中使用了这些属性,那么在BS4中这些代码无法执行.
+  * `UnicodeDammit.Unicode` -> `UnicodeDammit.Unicode_markup`
+  * `Tag.next` -> `Tag.next_element`
+  * `Tag.previous` -> `Tag.previous_element`
+
 ## 注意事项
 
 ### BeautifulSoup的Tag的属性

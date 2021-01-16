@@ -1,11 +1,11 @@
 # 网页解析利器：BeautifulSoup
 
-* 最新版本：`v1.0`
-* 更新时间：`20200216`
+* 最新版本：`v1.1`
+* 更新时间：`20201120`
 
 ## 简介
 
-整理好用的Python的HTML网页解析器BeautifulSoup的版本选择，为何叫BeautifulSoup，如何安装，如何用其从html网页源码中提取出特定的内容，以及总结常用的函数find和find_all的具体用法，并用实例解释BeautifulSoup和正则re的效果对比和优缺点对比，以及常见的注意事项和使用期间的心得体会。
+整理好用的Python的HTML网页解析器BeautifulSoup的版本选择，为何叫BeautifulSoup，如何安装，如何用其从html网页源码中提取出特定的内容，顺带介绍了最常用的一些逻辑和代码示例写法，以及总结常用的函数find和find_all的具体用法，并用实例解释BeautifulSoup和正则re的效果对比和优缺点对比，以及常见的注意事项和使用期间的心得体会。
 
 ## 源码+浏览+下载
 
